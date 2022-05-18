@@ -21,7 +21,9 @@ fun main(args: Array<String>) {
     allTask.add(taskFour)
     allTask.add(taskFive)
     // print out all the tasks
+    println("----------- print all task")
     println(allTask)
+    println("-------- end of all task printing")
     // READ
     // use forloop to print out task name
     /*
@@ -30,18 +32,22 @@ fun main(args: Array<String>) {
     }
 
      */
+    println("----read all tasks---")
     read(allTask)
     println("")
+    println("------end of all task read --------------")
 //    print("")
     // DELETE FROM THE STORAGE
     // what do I use as a key to identify my item, I want to eliminate
     // create a method, that uses the name to search if item is present, if present, remove from storage.
     // call the delete function
     // what is my selection
+    println("---------- deleting a task-----")
     val itemSelected = "Parenting"
     delete(itemSelected, allTask)
     // read the storage
     read(allTask)
+    println("------task has been deleted----")
 
     // update
     // this update is designed to add an asterik to the number class when the task is done
@@ -71,7 +77,10 @@ fun read(tasks:MutableList<Task>){
         if (tasks[i].isTaskDone){
             println("#${i + 1}* ${tasks[i].taskName}")
         }
-        println("#${i + 1} ${tasks[i].taskName}")
+        if (!tasks[i].isTaskDone){
+            println("#${i + 1} ${tasks[i].taskName}")
+        }
+
     }
 }
 
