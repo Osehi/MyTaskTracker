@@ -4,5 +4,5 @@ data class Task(
     val taskId: String,
     val taskName:String,
     val description: String,
-    val isTaskDone: Boolean = false
+    var isTaskDone: Boolean = false
 )

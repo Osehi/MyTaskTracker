@@ -44,11 +44,27 @@ fun main(args: Array<String>) {
     read(allTask)
 
     // update
-    // this update is designed to
+    // this update is designed to add an asterik to the number class when the task is done
+    // us the task name to update the task by marking it as asterik.
+}
+
+fun updateTaskAsCompleted(taskName:String, tasks:MutableList<Task>){
+    // search for this item in the given list
+    // use forloop and search for the item
+    // and set it complete status as true.
+    for (taskItem in tasks){
+        // first check if the item is there
+        if (taskItem.taskName == taskName){
+            // set the complete status as true
+            taskItem.isTaskDone = true
+        }
+    }
 }
 
 fun read(tasks:MutableList<Task>){
     for (i in tasks.indices){
+        // I need to modify the read a bit
+        // chech for
         println("#${i + 1} ${tasks[i].taskName}")
     }
 }
