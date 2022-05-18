@@ -1,6 +1,9 @@
 import model.Task
 
 fun main(args: Array<String>) {
+    // knowledge bank
+    // The system should automatically create an id for the tasks
+
     // I am a user and I have a task to create
     // by command first before cli
     // CREATE
@@ -21,9 +24,15 @@ fun main(args: Array<String>) {
     println(allTask)
     // READ
     // use forloop to print out task name
+    /*
     for (i in allTask.indices){
         println("#${i + 1} ${allTask[i].taskName}")
     }
+
+     */
+    read(allTask)
+    println("")
+//    print("")
     // DELETE FROM THE STORAGE
     // what do I use as a key to identify my item, I want to eliminate
     // create a method, that uses the name to search if item is present, if present, remove from storage.
@@ -31,11 +40,17 @@ fun main(args: Array<String>) {
     // what is my selection
     val itemSelected = "Parenting"
     delete(itemSelected, allTask)
-    //
+    // read the storage
+    read(allTask)
+
+    // update
+    // this update is designed to
 }
 
-fun read(){
-
+fun read(tasks:MutableList<Task>){
+    for (i in tasks.indices){
+        println("#${i + 1} ${tasks[i].taskName}")
+    }
 }
 
 /**
