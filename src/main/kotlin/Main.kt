@@ -46,6 +46,9 @@ fun main(args: Array<String>) {
     // update
     // this update is designed to add an asterik to the number class when the task is done
     // us the task name to update the task by marking it as asterik.
+    updateTaskAsCompleted("fashion", allTask)
+    println("----")
+    read(allTask)
 }
 
 fun updateTaskAsCompleted(taskName:String, tasks:MutableList<Task>){
@@ -64,7 +67,10 @@ fun updateTaskAsCompleted(taskName:String, tasks:MutableList<Task>){
 fun read(tasks:MutableList<Task>){
     for (i in tasks.indices){
         // I need to modify the read a bit
-        // chech for
+        // check for Boolean status
+        if (tasks[i].isTaskDone){
+            println("#${i + 1}* ${tasks[i].taskName}")
+        }
         println("#${i + 1} ${tasks[i].taskName}")
     }
 }
