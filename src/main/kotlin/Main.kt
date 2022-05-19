@@ -1,6 +1,22 @@
 import model.Task
+import java.util.Scanner
 
 fun main(args: Array<String>) {
+
+    // add menu
+    val scanner = Scanner(System.`in`)
+    var isRunning = true
+    while (isRunning){
+        println(
+            "This is a ToDo App\n\t1 View all my tasks\n\t2 Add task\n\t3 Delete tasks\n\t4 Update completed task\n\t5 Exit"
+        )
+        when(scanner.nextInt()){
+            1-> {
+                read()
+            }
+        }
+    }
+
     // knowledge bank
     // The system should automatically create an id for the tasks
 
