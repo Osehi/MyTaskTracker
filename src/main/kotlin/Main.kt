@@ -22,11 +22,12 @@ fun main(args: Array<String>) {
             2 -> {
                 println("Please enter the following details to create a task")
                 println("TaskId")
-                val taskId = scanner.next()
+                val taskId = scanner.nextLine()
+                scanner.nextLine()
                 println("TaskName")
-                val taskName = scanner.next()
+                val taskName = scanner.nextLine()
                 println("TaskDescription")
-                val taskDescription = scanner.next()
+                val taskDescription = scanner.nextLine()
                 myToDo.add(Task(taskId, taskName, taskDescription))
             }
             3 -> {
