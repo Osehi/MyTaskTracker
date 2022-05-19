@@ -32,4 +32,19 @@ class ToDoTest {
         assertTrue(itemList.size != 0)
     }
 
+    @Test
+    fun add_givenATaskToAdd_returnTrueWhenSizeOfStorageIsGreaterThanZero(){
+        // SUT
+        // Given
+        val itemList = mutableListOf<Task>()
+        val sut = ToDo(itemList)
+        val newTask = Task("two", "business", "Scaling Your Business")
+        // when
+        sut.add(newTask)
+        // assert
+        assertTrue(itemList.size != 0)
+    }
+
+
+
 }
